@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.example.arsalankhan.malakandlevies.SplashScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_splash_screen">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo" />
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_below="@id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Malakand Levies"
+        android:textColor="#555"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:visibility="visible"
+        app:indicatorColor="#FF4f4f4f"
+        app:indicatorName="BallTrianglePathIndicator"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/tv_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textColor="#FF4f4f4f"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/internet_error">
+        <TextView
+            android:text="Cannot connect to Internet...Please check your connection!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_internet_error"
+            android:padding="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="#898989"
+            android:layout_gravity="center_vertical"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:onClick="Refresh"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/refresh"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_show_po_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.example.arsalankhan.malakandlevies.show_criminal_list">
+
+    <include
+        android:id="@+id/po_toolbar"
+        layout="@layout/toolbar_po"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/po_toolbar"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:id="@+id/layout_search">
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView_PO"
+            android:layout_weight="3"></android.support.v7.widget.SearchView>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/search_spinner"></Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/layout_search"
+        android:background="#4444"
+        android:id="@+id/splitter"></View>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splitter"
+        android:layout_marginTop="20dp"
+        android:text="No Record Found!"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:id="@+id/tv_no_record_po"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_search"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/recyclerview_po">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

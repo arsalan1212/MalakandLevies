@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_criminal_complete_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arsalankhan.malakandlevies.CriminalCompleteDetail">
+
+    <include
+        android:id="@+id/po_detail_toolbar"
+        layout="@layout/toolbar_po_detail"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/po_detail_toolbar"
+        android:transitionGroup="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_below="@id/po_detail_toolbar"
+                android:background="#4b4b4b"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:transitionName="singlerow">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/po_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:transitionName="transition_criminal_image"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    android:elevation="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_po_nm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Criminal Name"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/f_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Father Name" />
+
+                <EditText
+                    android:id="@+id/et_father_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/f_name"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+
+                <TextView
+                    android:id="@+id/cnic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_father_name"
+                    android:layout_marginTop="10dp"
+                    android:text="CNIC" />
+
+                <EditText
+                    android:id="@+id/et_cnic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cnic"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_cnic"
+                    android:layout_marginTop="10dp"
+                    android:text="Phone No." />
+
+                <EditText
+                    android:id="@+id/et_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phone_no"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/district"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_phone_no"
+                    android:layout_marginTop="10dp"
+                    android:text="District" />
+
+                <EditText
+                    android:id="@+id/et_district"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/district"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_district"
+                    android:layout_marginTop="10dp"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/date_declare_po"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_address"
+                    android:layout_marginTop="10dp"
+                    android:text="Date Declare P.O" />
+
+                <EditText
+                    android:id="@+id/et_date_declare_po"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_declare_po"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/court_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_date_declare_po"
+                    android:layout_marginTop="10dp"
+                    android:text="Court Name" />
+
+                <EditText
+                    android:id="@+id/et_court_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/court_name"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_court_name"
+                    android:layout_marginTop="10dp"
+                    android:text="Status" />
+
+                <EditText
+                    android:id="@+id/et_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/status"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/status_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_status"
+                    android:layout_marginTop="10dp"
+                    android:text="Status Details" />
+
+                <EditText
+                    android:id="@+id/et_status_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/status_details"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_status_details"
+                    android:layout_marginTop="10dp"
+                    android:text="Comments" />
+
+                <EditText
+                    android:id="@+id/et_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comments"
+                    android:background="#fff"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="" />
+
+
+                <View
+                    android:id="@+id/separator2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/et_comments"
+                    android:layout_marginTop="10dp"
+                    android:background="#8e8e8e" />
+
+
+                <LinearLayout
+                    android:id="@+id/crime_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separator2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/crime_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000"
+                        android:padding="10dp"
+                        android:text="Crime Details"
+                        android:textAlignment="center"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_crime_no_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="No Crime Record Found!"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#ff00"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

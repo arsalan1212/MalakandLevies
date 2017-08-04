@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Malakand Levies</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="criminal_search">
+        <item>Name</item>
+        <item>Nic</item>
+        <item>District</item>
+    </string-array>
+
+    <string-array name="force_search">
+        <item>Name</item>
+        <item>Registration Number</item>
+        <item>Rank</item>
+    </string-array>
+</resources>
